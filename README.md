@@ -72,4 +72,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Authors
 
-List the authors or contributors of the project, with links to their profiles if available.
+|Name|Type|
+|--|--|
+|[Dhanu K](https://github.com/bewithdhanu)|Author|
