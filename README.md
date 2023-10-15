@@ -61,14 +61,13 @@ Explain how to use your project once it's installed. Provide examples and code s
 python main.py
 ```
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## Acknowledgments
 
 - [Tuya Official Python SDK](https://github.com/tuya/tuya-iot-python-sdk)
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Authors
 
