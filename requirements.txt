@@ -1,0 +1,11 @@
+certifi==2023.7.22
+charset-normalizer==3.3.0
+idna==3.4
+paho-mqtt==1.6.1
+pycryptodome==3.19.0
+pywifi==1.1.12
+requests==2.31.0
+tuya-iot-py-sdk==0.6.6
+urllib3==1.26.7
+websocket-client==1.6.4
+xmltodict==0.13.0
