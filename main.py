@@ -28,6 +28,7 @@ wait_for_wifi_connection()
 print("Wi-Fi is connected!")
 while True:
     battery = getBatteryPercent()
+    print('battery: ' + battery)
     if battery is not None:
         if battery > 80 and getStatus():
             turnOff()
