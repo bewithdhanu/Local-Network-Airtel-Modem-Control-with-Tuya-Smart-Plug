@@ -23,5 +23,5 @@ def getBatteryPercent():
 
         data_dict = json.loads(json_data)
         return int(data_dict['title']['batt_p'])
-    finally:
+    except:
         return None
