@@ -25,6 +25,7 @@ def wait_for_wifi_connection(timeout=300):
 
 
 wait_for_wifi_connection()
+print("Wi-Fi is connected!")
 while True:
     battery = getBatteryPercent()
     if battery is not None:
