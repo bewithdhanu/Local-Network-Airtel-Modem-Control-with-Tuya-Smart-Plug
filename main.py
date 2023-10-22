@@ -28,12 +28,13 @@ wait_for_wifi_connection()
 print("Wi-Fi is connected!")
 while True:
     battery = getBatteryPercent()
-    print('battery: ' + battery)
     if battery is not None:
+        print('battery: '+battery)
         if battery > 80 and getStatus():
             turnOff()
         if battery < 20 and not getStatus():
             turnOn()
-
+    else:
+        print('battery: None')
     # Wait for 60 seconds (1 minute) before running the task again
     time.sleep(60)
