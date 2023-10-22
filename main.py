@@ -20,16 +20,16 @@ def wait_for_wifi_connection(timeout=300):
     start_time = time.time()
     while not is_wifi_connected():
         if time.time() - start_time >= timeout:
-            logging.debug("Timeout reached. Wi-Fi not connected.")
+            logging.info("Timeout reached. Wi-Fi not connected.")
             break
         time.sleep(1)
 
 
 wait_for_wifi_connection()
-logging.debug("Wi-Fi is connected!")
+logging.info("Wi-Fi is connected!")
 while True:
     battery = getBatteryPercent()
-    logging.debug('battery: ' + str(battery))
+    logging.info('battery: ' + str(battery))
     if battery is not None:
         if battery > 80 and getStatus():
             turnOff()
