@@ -1,3 +1,4 @@
+import logging
 import time
 import os
 import subprocess
@@ -19,16 +20,16 @@ def wait_for_wifi_connection(timeout=300):
     start_time = time.time()
     while not is_wifi_connected():
         if time.time() - start_time >= timeout:
-            print("Timeout reached. Wi-Fi not connected.")
+            logging.debug("Timeout reached. Wi-Fi not connected.")
             break
         time.sleep(1)
 
 
 wait_for_wifi_connection()
-print("Wi-Fi is connected!")
+logging.debug("Wi-Fi is connected!")
 while True:
     battery = getBatteryPercent()
-    print('battery: ' + str(battery))
+    logging.debug('battery: ' + str(battery))
     if battery is not None:
         if battery > 80 and getStatus():
             turnOff()
