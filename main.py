@@ -6,11 +6,13 @@ import subprocess
 from device import turnOff, turnOn, getStatus
 from modem import getBatteryPercent
 
+IWGETID_PATH = '/usr/sbin/iwgetid'
+
 
 def is_wifi_connected():
     try:
         # Use the 'iwgetid' command to check if the system is connected to Wi-Fi
-        subprocess.check_output(["iwgetid"])
+        subprocess.check_output([IWGETID_PATH])
         return True
     except subprocess.CalledProcessError:
         return False
