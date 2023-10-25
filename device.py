@@ -1,15 +1,16 @@
-from env import ENDPOINT, ACCESS_ID, ACCESS_KEY, USERNAME, PASSWORD, DEVICE_ID
+from env import ENDPOINT, ACCESS_ID, ACCESS_KEY, USERNAME, PASSWORD
 
 from tuya_iot import TuyaOpenAPI, TUYA_LOGGER
+import logging
 
 # Initialization of tuya openapi
 openapi = TuyaOpenAPI(ENDPOINT, ACCESS_ID, ACCESS_KEY)
 openapi.connect(USERNAME, PASSWORD, "86", 'smartlife')
 
 # # Uncomment the following lines to see logs.
-import logging
 
 TUYA_LOGGER.setLevel(logging.DEBUG)
+DEVICE_ID = "d78c1088123b5a2cb8ogmp"
 
 
 def turnOff():
