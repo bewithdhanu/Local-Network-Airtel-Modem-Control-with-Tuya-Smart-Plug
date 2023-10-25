@@ -1,3 +1,6 @@
+import logging
+import threading
+
 from flask import Flask
 
 from modem import automateModem
@@ -13,5 +16,11 @@ def turn_on_speaker():
 
 
 if __name__ == '__main__':
-    automateModem()
-    app.run()
+    # Start the background task in a separate thread
+    try:
+        task_thread = threading.Thread(target=automateModem)
+        task_thread.start()
+    except:
+        logging.error("automateModem has fialed to starte")
+    finally:
+        app.run()
