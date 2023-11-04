@@ -16,8 +16,7 @@ def turn_on_speaker():
 
 
 @app.route('/', methods=['GET'])
-def turn_on_speaker():
-    turnOnSpeaker()
+def main():
     return 'Hello Dhanu!'
 
 
