@@ -14,6 +14,11 @@ def turn_on_speaker():
     turnOnSpeaker()
     return 'Speaker turned on'
 
+@app.route('/', methods=['GET'])
+def turn_on_speaker():
+    turnOnSpeaker()
+    return 'Hello Dhanu!'
+
 
 if __name__ == '__main__':
     # Start the background task in a separate thread
