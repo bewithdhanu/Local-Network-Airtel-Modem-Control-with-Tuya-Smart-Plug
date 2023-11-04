@@ -14,6 +14,7 @@ def turn_on_speaker():
     turnOnSpeaker()
     return 'Speaker turned on'
 
+
 @app.route('/', methods=['GET'])
 def turn_on_speaker():
     turnOnSpeaker()
@@ -26,6 +27,6 @@ if __name__ == '__main__':
         task_thread = threading.Thread(target=automateModem)
         task_thread.start()
     except:
-        logging.error("automateModem has fialed to starte")
+        logging.error("automateModem has failed to start")
     finally:
         app.run()
