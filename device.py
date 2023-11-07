@@ -32,8 +32,9 @@ def getStatus():
     # You can access specific data fields using dictionary notation
     # For example, if the response contains a 'status' field:
     commands = resource.get('result')
-    for command in commands:
-        if command['code'] == 'switch_1':
-            return command['value']
+    if commands:
+        for command in commands:
+            if command['code'] == 'switch_1':
+                return command['value']
     return False
 
