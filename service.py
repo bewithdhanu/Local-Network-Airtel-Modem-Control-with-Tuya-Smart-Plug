@@ -15,6 +15,12 @@ def turn_on_speaker():
     return 'Speaker turned on'
 
 
+@app.route('/automate-modem', methods=['GET'])
+def turn_on_speaker():
+    automateModem()
+    return 'Automate modem ran successfully'
+
+
 @app.route('/', methods=['GET'])
 def main():
     return 'Hello Dhanu!'
@@ -22,10 +28,4 @@ def main():
 
 if __name__ == '__main__':
     # Start the background task in a separate thread
-    try:
-        task_thread = threading.Thread(target=automateModem)
-        task_thread.start()
-    except:
-        logging.error("automateModem has failed to start")
-    finally:
-        app.run()
+    app.run()
