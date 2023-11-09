@@ -55,13 +55,10 @@ def wait_for_wifi_connection(timeout=300):
 def automateModem():
     wait_for_wifi_connection()
     logging.info("Wi-Fi is connected!")
-    while True:
-        battery = getBatteryPercent()
-        logging.info('battery: ' + str(battery))
-        if battery is not None:
-            if battery > 80 and getStatus():
-                turnOff()
-            if battery < 20 and not getStatus():
-                turnOn()
-        # Wait for 60 seconds (1 minute) before running the task again
-        time.sleep(60)
+    battery = getBatteryPercent()
+    logging.info('battery: ' + str(battery))
+    if battery is not None:
+        if battery > 80 and getStatus():
+            turnOff()
+        if battery < 20 and not getStatus():
+            turnOn()
