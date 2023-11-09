@@ -60,5 +60,5 @@ def automateModem():
     if battery is not None:
         if battery > 80 and getStatus():
             turnOff()
-        if battery < 50 and not getStatus():
+        if battery < 20 and not getStatus():
             turnOn()
