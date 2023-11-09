@@ -16,7 +16,7 @@ def turn_on_speaker():
 
 
 @app.route('/automate-modem', methods=['GET'])
-def turn_on_speaker():
+def automate_modem():
     automateModem()
     return 'Automate modem ran successfully'
 
