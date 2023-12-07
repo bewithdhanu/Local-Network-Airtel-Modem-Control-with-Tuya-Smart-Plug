@@ -22,7 +22,7 @@ def automate_modem():
 
 
 @app.route('/restart-modem', methods=['GET'])
-def automate_modem():
+def restart_modem():
     restartModem()
     return 'Automate modem ran successfully'
 
