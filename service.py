@@ -3,7 +3,7 @@ import threading
 
 from flask import Flask
 
-from modem import automateModem
+from modem import automateModem, restartModem
 from speaker import turnOnSpeaker
 
 app = Flask(__name__)
@@ -18,6 +18,12 @@ def turn_on_speaker():
 @app.route('/automate-modem', methods=['GET'])
 def automate_modem():
     automateModem()
+    return 'Automate modem ran successfully'
+
+
+@app.route('/restart-modem', methods=['GET'])
+def automate_modem():
+    restartModem()
     return 'Automate modem ran successfully'
 
 

@@ -34,6 +34,22 @@ def getBatteryPercent():
         return None
 
 
+def restartModem():
+    try:
+        url = "http://192.168.1.1/wxml/set_reboot.xml"
+
+        payload = "reboot=1"
+        headers = {
+            'Referer': 'http://192.168.1.1/index.html',
+        }
+
+        response = requests.request("POST", url, headers=headers, data=payload)
+
+        print(response.text)
+    except:
+        print("Failed to restart")
+
+
 def is_wifi_connected():
     try:
         # Use the 'iwgetid' command to check if the system is connected to Wi-Fi
